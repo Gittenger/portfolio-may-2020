@@ -8,6 +8,7 @@ export const ButtonContainer = styled.button`
 
   &:hover {
     filter: brightness(85%);
+    cursor: pointer;
   }
 
   &:active {

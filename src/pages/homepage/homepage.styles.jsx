@@ -11,4 +11,11 @@ export const HomePageComponent = styled.div`
     width: 20vw;
     height: 20vw;
   }
+
+  .icons-container {
+    ${FlexCenter}
+    & > * {
+      margin: 1rem;
+    }
+  }
 `;
