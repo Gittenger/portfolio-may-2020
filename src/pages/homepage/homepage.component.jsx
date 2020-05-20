@@ -12,6 +12,13 @@ import { ReactComponent as TwitterLogo } from "../../assets/twitter.svg";
 
 import { HomePageComponent } from "./homepage.styles";
 
+const iter = [
+  { index: 1, render: GithubLogo },
+  { index: 2, render: TwitterLogo },
+  { index: 3, render: EmailLogo },
+  { index: 4, render: LinkedinLogo },
+];
+
 const HomePage = () => (
   <HomePageComponent>
     <InfoBox
@@ -30,18 +37,11 @@ const HomePage = () => (
     />
     <Button>See my work &rarr;</Button>
     <div className="icons-container">
-      <IconBox fill="dodgerblue" hover="red">
-        <GithubLogo />
-      </IconBox>
-      <IconBox fill="dodgerblue" hover="red">
-        <TwitterLogo />
-      </IconBox>
-      <IconBox fill="dodgerblue" hover="red">
-        <EmailLogo />
-      </IconBox>
-      <IconBox fill="dodgerblue" hover="red">
-        <LinkedinLogo />
-      </IconBox>
+      {iter.map((item) => (
+        <IconBox fill="dodgerblue" hover="red" key={item.index}>
+          <item.render />
+        </IconBox>
+      ))}
     </div>
   </HomePageComponent>
 );
