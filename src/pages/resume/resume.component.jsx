@@ -5,7 +5,7 @@ import { ResumePageContainer, ResumeContainer } from "./resume.styles";
 
 const ResumePage = () => (
   <ResumePageContainer>
-    <h1>Title</h1>
+    <h1>My Resume</h1>
     <ResumeContainer>
       <Document file="/resume.pdf">
         <Page pageNumber={1} width={600} />
