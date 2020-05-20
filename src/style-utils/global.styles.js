@@ -14,6 +14,7 @@ html{
 body{
     font-size: 1.5rem;
     background-color: ${({ theme: { colors } }) => colors.white};
+    font-family: 'Exo', sans-serif;
 }
 
 a{
@@ -27,6 +28,10 @@ a:visited{
 
 ul, li {
     list-style: none;
+}
+
+button {
+    font-family: inherit;
 }
 `;
 
