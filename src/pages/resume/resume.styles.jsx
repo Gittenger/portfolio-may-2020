@@ -7,3 +7,14 @@ export const ResumePageContainer = styled.div`
   flex-direction: column;
   width: 100%;
 `;
+
+export const ResumeContainer = styled.div`
+  ${FlexCenter}
+  width: 80%;
+  height: 80%;
+  overflow-y: scroll;
+
+  & > * {
+    height: 100%;
+  }
+`;
