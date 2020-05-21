@@ -2,18 +2,28 @@ import styled, { css } from "styled-components";
 
 import { FlexCenter } from "../../style-utils/utils.styles";
 
-import { device } from "../../style-utils/utils.styles";
+import { deviceMin } from "../../style-utils/utils.styles";
 
-const { mobileM } = device;
+const { minMobileM } = deviceMin;
 
 export const HeaderContainer = styled.header`
-${FlexCenter}
+  ${FlexCenter}
   background: ${({ theme: { colors } }) =>
     `linear-gradient(to bottom right, ${colors.primaryDark1}, ${colors.primaryDark2})`};
 
-    @media ${mobileM} {
-      display: none;
-    }
+  @media ${minMobileM} {
+    display: none;
+  }
+
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  transform: translateY(-3000px);
+
+  &.active {
+    transform: translateY(0);
+  }
 
   nav {
     ${FlexCenter}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import InfoBox from "../../components/info-box/info-box.component";
 import ImageBox from "../../components/image-box/image-box.component";
@@ -40,7 +41,9 @@ const HomePage = () => (
         "https://i.pinimg.com/originals/da/45/f8/da45f8791ec444f1599fb45bf5e1b705.jpg"
       }
     />
-    <Button>See my work &#8640; </Button>
+    <Link to="/projects">
+      <Button>See my work &#8640;</Button>
+    </Link>
     <div className="icons-container">
       {iter.map((item) => (
         <IconBox

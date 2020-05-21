@@ -9,6 +9,7 @@ const ResumePage = () => (
     <ResumeContainer>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://drive.google.com/file/d/1fqA2Q1UlK8iUHy-x-HAM-t-8TVFGBTbq/view?usp=sharing"
       >
         <Document file="/resume.pdf">

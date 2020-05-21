@@ -6,6 +6,10 @@ export const ResumePageContainer = styled.div`
   ${FlexCenter}
   flex-direction: column;
   width: 100%;
+
+  & > h1 {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ResumeContainer = styled.div`

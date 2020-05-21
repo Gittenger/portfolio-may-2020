@@ -29,6 +29,8 @@ export const HomePageComponent = styled.div`
 
   .icons-container {
     ${FlexCenter}
+    position: relative;
+    z-index: 1;
     padding-top: 1rem;
     & > * {
       margin: 1rem;
