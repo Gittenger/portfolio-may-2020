@@ -13,13 +13,19 @@ import ContactPage from "./pages/contact/contact.component";
 import GlobalStyles from "./style-utils/global.styles";
 
 function App() {
-  const [menuActive, toggleMenuActive] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
+
+  const toggleMenuActive = () => {
+    setMenuActive(!menuActive);
+  };
 
   return (
     <AppContainer>
       <GlobalStyles />
       <Header />
-      <HeaderMobile />
+
+      <HeaderMobile visible={menuActive} toggleMenuActive={toggleMenuActive} />
+
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route path="/projects" component={ProjectsPage}></Route>
