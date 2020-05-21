@@ -10,13 +10,18 @@ import { ReactComponent as EmailLogo } from "../../assets/envelope.svg";
 import { ReactComponent as LinkedinLogo } from "../../assets/linkedin.svg";
 import { ReactComponent as TwitterLogo } from "../../assets/twitter.svg";
 
+import theme from "../../style-utils/theme.styles";
 import { HomePageComponent } from "./homepage.styles";
 
 const iter = [
-  { index: 1, render: GithubLogo },
-  { index: 2, render: TwitterLogo },
-  { index: 3, render: EmailLogo },
-  { index: 4, render: LinkedinLogo },
+  { index: 1, render: GithubLogo, link: "https://github.com/Gittenger" },
+  { index: 2, render: TwitterLogo, link: "https://twitter.com/GittengerDev" },
+  { index: 3, render: EmailLogo, link: "email@email.com", email: true },
+  {
+    index: 4,
+    render: LinkedinLogo,
+    link: "https://www.linkedin.com/in/john-pittenger/",
+  },
 ];
 
 const HomePage = () => (
@@ -35,10 +40,16 @@ const HomePage = () => (
         "https://i.pinimg.com/originals/da/45/f8/da45f8791ec444f1599fb45bf5e1b705.jpg"
       }
     />
-    <Button>See my work &rarr;</Button>
+    <Button>See my work &#8640; </Button>
     <div className="icons-container">
       {iter.map((item) => (
-        <IconBox fill="dodgerblue" hover="red" key={item.index}>
+        <IconBox
+          link={item.link}
+          fill={theme.colors.primaryDark1}
+          hover={theme.colors.primary2}
+          key={item.index}
+          email={item.email}
+        >
           <item.render />
         </IconBox>
       ))}

@@ -19,6 +19,6 @@ export const InfoBoxContainer = styled.div`
         : alignment === "left"
         ? "left"
         : "right"};
-    margin: 2.5rem 0;
+    margin: 0.5rem 0;
   }
 `;

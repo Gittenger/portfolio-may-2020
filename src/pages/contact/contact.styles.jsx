@@ -14,6 +14,7 @@ export const ContactForm = styled.div`
   grid-row-gap: 1.5rem;
   width: 60%;
   padding: 2rem;
+  border-radius: 0.8rem;
   background-color: white;
 `;
 

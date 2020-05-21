@@ -7,10 +7,17 @@ export const IconBoxContainer = styled.div`
 
   svg {
     fill: ${({ fill }) => fill};
+    transform: translateY(0);
+    transition: all 0.3s;
   }
 
   svg:hover {
     cursor: pointer;
     fill: ${({ hover }) => hover};
+  }
+
+  svg:active {
+    filter: brightness(90%);
+    transform: translateY(2px);
   }
 `;

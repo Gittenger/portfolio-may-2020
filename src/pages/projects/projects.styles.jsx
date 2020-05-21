@@ -16,5 +16,6 @@ export const ContentContainer = styled.div`
   align-items: center;
   width: 90%;
   height: 80%;
-  background-color: white;
+  background-color: ${({ theme: { colors } }) => colors.primaryDark1};
+  border-radius: 0.8rem;
 `;

@@ -5,7 +5,7 @@ export const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   background: ${({ theme: { colors } }) =>
-    `linear-gradient(to bottom right, ${colors.grad1}, ${colors.grad2})`};
+    `linear-gradient(to bottom right, ${colors.primaryDark1}, ${colors.primaryDark2})`};
 
   nav {
     display: flex;
@@ -19,7 +19,7 @@ export const HeaderContainer = styled.header`
   ul {
     height: 70%;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -30,7 +30,7 @@ export const HeaderContainer = styled.header`
   }
 
   li {
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,13 +38,14 @@ export const HeaderContainer = styled.header`
 
   a {
     width: 100%;
+    border-radius: 0.4rem;
     text-align: center;
-    transition: all 0.3s;
+    transition: all 0.5s;
     padding: 1rem 0;
   }
 
   a:hover {
-    background-color: rgba(10, 10, 10, 0.8);
+    background-color: ${({ theme: { colors } }) => colors.primaryDark2};
     color: ${({ theme: { colors } }) => colors.white};
   }
 `;

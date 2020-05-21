@@ -1,7 +1,15 @@
 import React from "react";
 
-import { ProjectCoverContainer } from "./project-cover.styles";
+import Button from "../button/button.component";
 
-const ProjectCover = ({ imgUrl }) => <ProjectCoverContainer imgUrl={imgUrl} />;
+import { ProjectCoverContainer, HoverBox } from "./project-cover.styles";
+
+const ProjectCover = ({ imgUrl }) => (
+  <ProjectCoverContainer imgUrl={imgUrl}>
+    <HoverBox>
+      <Button dark={true}>See more</Button>
+    </HoverBox>
+  </ProjectCoverContainer>
+);
 
 export default ProjectCover;
