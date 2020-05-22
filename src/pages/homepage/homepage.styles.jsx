@@ -6,6 +6,7 @@ export const HomePageComponent = styled.div`
   ${FlexCenter}
   flex-direction: column;
   width: 100%;
+  max-height: 100vh;
 
   & > *:first-child {
     margin-bottom: 1.5rem;

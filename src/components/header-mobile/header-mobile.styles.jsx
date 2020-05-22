@@ -64,3 +64,10 @@ export const HeaderContainer = styled.header`
     color: ${({ theme: { colors } }) => colors.white};
   }
 `;
+
+export const ToggleButton = styled.button`
+  position: absolute;
+  z-index: 2000;
+  top: 1.5rem;
+  right: 1.5rem;
+`;

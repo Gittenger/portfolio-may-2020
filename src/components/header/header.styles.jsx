@@ -4,7 +4,7 @@ import { FlexCenter } from "../../style-utils/utils.styles";
 
 import { device } from "../../style-utils/utils.styles";
 
-const { mobileM } = device;
+const { mobileM, tabletLand } = device;
 
 export const HeaderContainer = styled.header`
 ${FlexCenter}
@@ -17,7 +17,7 @@ ${FlexCenter}
 
   nav {
     ${FlexCenter}
-    width: 220px;
+    width: 90%;
     height: 400px;
   }
 

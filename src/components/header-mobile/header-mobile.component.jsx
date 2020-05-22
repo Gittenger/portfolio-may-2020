@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { HeaderContainer } from "./header-mobile.styles";
+import { HeaderContainer, ToggleButton } from "./header-mobile.styles";
 
 const Header = ({ mobile, visible, toggleMenuActive }) => (
   <>
-    {/* <button onClick={toggleMenuActive}>toggle</button> */}
+    <ToggleButton onClick={toggleMenuActive}>toggle</ToggleButton>
     <HeaderContainer mobile={mobile} className={visible ? "active" : ""}>
       <nav>
         <ul>
