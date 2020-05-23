@@ -20,6 +20,7 @@ export const HeaderContainer = styled.header`
   height: 100vh;
   z-index: 1000;
   transform: translateY(-3000px);
+  transition: transform  .4s;
 
   &.active {
     transform: translateY(0);

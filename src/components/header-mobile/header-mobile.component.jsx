@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import ToggleButton from "../toggle-button/toggle-button.component";
-
 import { HeaderContainer, ToggleButtonButton } from "./header-mobile.styles";
 
 const Header = ({ mobile, visible, toggleMenuActive }) => (
