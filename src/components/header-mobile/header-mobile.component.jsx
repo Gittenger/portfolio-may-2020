@@ -1,11 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { HeaderContainer, ToggleButton } from "./header-mobile.styles";
+// import ToggleButton from "../toggle-button/toggle-button.component";
+
+import { HeaderContainer, ToggleButtonButton } from "./header-mobile.styles";
 
 const Header = ({ mobile, visible, toggleMenuActive }) => (
   <>
-    <ToggleButton onClick={toggleMenuActive}>toggle</ToggleButton>
+    <ToggleButtonButton
+      className={visible ? "active" : ""}
+      onClick={toggleMenuActive}
+    >
+      <div></div>
+      <div></div>
+      <div></div>
+    </ToggleButtonButton>
     <HeaderContainer mobile={mobile} className={visible ? "active" : ""}>
       <nav>
         <ul>

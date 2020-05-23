@@ -65,9 +65,47 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const ToggleButton = styled.button`
+export const ToggleButtonButton = styled.div`
+  ${FlexCenter}
+  flex-direction: column;
+  justify-content: space-evenly;
   position: absolute;
   z-index: 2000;
   top: 1.5rem;
   right: 1.5rem;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+
+  div {
+    width: 100%;
+    height: 0.3rem;
+    margin: 0.3rem 0;
+    background-color: black;
+    transform: rotate(0) translate(0, 0);
+    transition: transform 0.5s;
+  }
+
+  &.active {
+    div {
+      background-color: white;
+    }
+
+    div:nth-child(2) {
+      transform: translateX(500px);
+    }
+
+    & > div:first-child {
+      transform: rotate(45deg) translateY(14px);
+    }
+
+    & > div:last-child {
+      transform: rotate(-45deg) translateY(-13px);
+    }
+  }
+
+  @media ${minMobileM} {
+    display: none;
+  }
 `;
