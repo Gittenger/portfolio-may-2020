@@ -5,21 +5,25 @@ import Button from "../button/button.component";
 
 import { ProjectCoverContainer, HoverBox } from "./project-cover.styles";
 
-const ProjectCover = ({ imgUrl, link, projectId }) => (
-  <ProjectCoverContainer imgUrl={imgUrl}>
-    <HoverBox>
-      <Link
-        to={{
-          pathname: `${link}/${projectId}`,
-          state: {
-            imgUrl,
-          },
-        }}
-      >
-        <Button dark={true}>See more</Button>
-      </Link>
-    </HoverBox>
-  </ProjectCoverContainer>
-);
+const ProjectCover = ({ link, projectId, ...otherProps }) => {
+  const { imgUrl } = otherProps;
+
+  return (
+    <ProjectCoverContainer imgUrl={imgUrl}>
+      <HoverBox>
+        <Link
+          to={{
+            pathname: `${link}/${projectId}`,
+            state: {
+              ...otherProps,
+            },
+          }}
+        >
+          <Button dark={true}>See more</Button>
+        </Link>
+      </HoverBox>
+    </ProjectCoverContainer>
+  );
+};
 
 export default ProjectCover;

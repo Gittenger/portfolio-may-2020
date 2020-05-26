@@ -5,6 +5,8 @@ import { FlexCenter } from "../../style-utils/utils.styles";
 export const ProjectsPageContainer = styled.div`
   ${FlexCenter}
   flex-direction: column;
+  overflow-y: scroll;
+
   width: 100%;
 
   & > h1 {
