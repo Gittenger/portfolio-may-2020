@@ -1,6 +1,8 @@
 import React from "react";
+import { Route } from "react-router-dom";
 
 import ProjectCover from "../../components/project-cover/project-cover.component";
+import ProjectComponent from "../../components/project-component/project-component.component";
 
 import { ProjectsPageContainer, ContentContainer } from "./projects.styles";
 
@@ -27,14 +29,32 @@ const iter = [
   },
 ];
 
-const ProjectsPage = () => (
+const ProjectsPage = ({ match }) => (
   <ProjectsPageContainer>
-    <h1>Projects</h1>
-    <ContentContainer>
-      {iter.map(({ index, ...rest }) => (
-        <ProjectCover key={index} {...rest} />
-      ))}
-    </ContentContainer>
+    <Route
+      exact
+      path={`${match.path}`}
+      render={() => (
+        <>
+          {" "}
+          <h1>Projects</h1>
+          <ContentContainer>
+            {iter.map(({ index, ...rest }) => (
+              <ProjectCover
+                link={match.path}
+                key={index}
+                projectId={index}
+                {...rest}
+              />
+            ))}
+          </ContentContainer>
+        </>
+      )}
+    ></Route>
+    <Route
+      path={`${match.path}/:projectId`}
+      component={ProjectComponent}
+    ></Route>
   </ProjectsPageContainer>
 );
 
