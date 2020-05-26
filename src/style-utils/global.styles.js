@@ -15,6 +15,7 @@ body{
     font-size: 1.5rem;
     background-color: ${({ theme: { colors } }) => colors.white};
     font-family: 'Exo', sans-serif;
+    position: relative;
 }
 
 a{

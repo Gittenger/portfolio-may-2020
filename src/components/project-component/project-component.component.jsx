@@ -5,7 +5,7 @@ import Button from "../button/button.component";
 import ReactLogo from "../../assets/react.svg";
 import ReduxLogo from "../../assets/redux.svg";
 import JSLogo from "../../assets/javascript.svg";
-import SassLogo from "../../assets/sass.svg";
+import CSSLogo from "../../assets/css3.svg";
 import SagaLogo from "../../assets/redux-saga.svg";
 import HerokuLogo from "../../assets/heroku.svg";
 import FirebaseLogo from "../../assets/firebase.svg";
@@ -38,7 +38,7 @@ const ProjectComponent = ({ location: { state } }) => {
     if (item.name === "React") icons.push(ReactLogo);
     if (item.name === "Redux") icons.push(ReduxLogo);
     if (item.name === "JavaScript") icons.push(JSLogo);
-    if (item.name === "Sass") icons.push(SassLogo);
+    if (item.name === "CSS") icons.push(CSSLogo);
     if (item.name === "Saga") icons.push(SagaLogo);
     if (item.name === "Heroku") icons.push(HerokuLogo);
     if (item.name === "Firebase") icons.push(FirebaseLogo);

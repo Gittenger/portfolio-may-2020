@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { tabletLand, laptopS } = device;
 
 export const ProjectContainer = styled.div`
   ${FlexCenter}
@@ -8,7 +10,14 @@ export const ProjectContainer = styled.div`
   width: 100%;
   padding: 1rem 0 2rem;
   position: absolute;
+  z-index: 1;
   top: 0;
+
+  @media ${tabletLand} {
+    iframe {
+      width: 90%;
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -39,8 +48,16 @@ export const DescriptionBox = styled.div`
 export const ButtonBox = styled.div`
   ${FlexCenter}
   justify-content: space-between;
-  width: 25%;
+  width: 35%;
   padding-top: 1.5rem;
+
+  @media ${laptopS} {
+    width: 80%;
+  }
+
+  @media ${tabletLand} {
+    width: 75%;
+  }
 `;
 
 export const TechDescription = styled.div`
