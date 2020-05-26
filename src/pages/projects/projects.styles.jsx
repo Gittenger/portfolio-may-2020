@@ -6,8 +6,9 @@ export const ProjectsPageContainer = styled.div`
   ${FlexCenter}
   flex-direction: column;
   overflow-y: scroll;
-
+  height: 100vh;
   width: 100%;
+  position: relative;
 
   & > h1 {
     margin-bottom: 1rem;

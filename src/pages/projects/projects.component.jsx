@@ -15,7 +15,14 @@ const iter = [
     desc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti blanditiis ut nihil repudiandae officiis. Ullam, odit? Aspernatur reiciendis in, voluptatem voluptatum minus adipisci maxime qui at quisquam tenetur ipsam quasi, repellendus nesciunt ipsa aut! Consequuntur laborum expedita voluptas aperiam itaque.",
     techStack: {
-      names: [{ name: "github" }, { name: "linkedin" }],
+      names: [
+        { name: "react" },
+        { name: "redux" },
+        { name: "saga" },
+        { name: "heroku" },
+        { name: "firebase" },
+        { name: "stripe" },
+      ],
     },
     embedLink: "https://www.youtube.com/embed/MRIMT0xPXFI",
   },
@@ -27,7 +34,7 @@ const iter = [
     desc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti blanditiis ut nihil repudiandae officiis. Ullam, odit? Aspernatur reiciendis in, voluptatem voluptatum minus adipisci maxime qui at quisquam tenetur ipsam quasi, repellendus nesciunt ipsa aut! Consequuntur laborum expedita voluptas aperiam itaque.",
     techStack: {
-      names: [{ name: "github" }, { name: "linkedin" }],
+      names: [{ name: "javascript" }, { name: "sass" }],
     },
     embedLink: "https://www.youtube.com/embed/MRIMT0xPXFI",
   },
@@ -39,7 +46,12 @@ const iter = [
     desc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti blanditiis ut nihil repudiandae officiis. Ullam, odit? Aspernatur reiciendis in, voluptatem voluptatum minus adipisci maxime qui at quisquam tenetur ipsam quasi, repellendus nesciunt ipsa aut! Consequuntur laborum expedita voluptas aperiam itaque.",
     techStack: {
-      names: [{ name: "github" }, { name: "linkedin" }],
+      names: [
+        { name: "node" },
+        { name: "pug" },
+        { name: "stripe" },
+        { name: "heroku" },
+      ],
     },
     embedLink: "https://www.youtube.com/embed/MRIMT0xPXFI",
   },
@@ -51,7 +63,7 @@ const iter = [
     desc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti blanditiis ut nihil repudiandae officiis. Ullam, odit? Aspernatur reiciendis in, voluptatem voluptatum minus adipisci maxime qui at quisquam tenetur ipsam quasi, repellendus nesciunt ipsa aut! Consequuntur laborum expedita voluptas aperiam itaque.",
     techStack: {
-      names: [{ name: "github" }, { name: "linkedin" }],
+      names: [{ name: "react" }, { name: "redux" }],
     },
     embedLink: "https://www.youtube.com/embed/MRIMT0xPXFI",
   },
