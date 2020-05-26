@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "../button/button.component";
+
 import ReactLogo from "../../assets/react.svg";
 import ReduxLogo from "../../assets/redux.svg";
 import JSLogo from "../../assets/javascript.svg";
@@ -11,22 +13,38 @@ import PugLogo from "../../assets/pug.svg";
 import NodeLogo from "../../assets/node.svg";
 import StripeLogo from "../../assets/stripe.svg";
 
-import { ProjectContainer } from "./project-component.styles";
+import {
+  ProjectContainer,
+  Title,
+  ImageBox,
+  DescriptionBox,
+  ButtonBox,
+  TechDescription,
+  TechIcons,
+} from "./project-component.styles";
 
 const ProjectComponent = ({ location: { state } }) => {
-  const { imgUrl, name, desc, techStack, embedLink } = state;
+  const {
+    imgUrl,
+    name,
+    desc,
+    techStack,
+    embedLink,
+    githubLink,
+    projectLink,
+  } = state;
   let icons = [];
   techStack.names.forEach((item) => {
-    if (item.name === "react") icons.push(ReactLogo);
-    if (item.name === "redux") icons.push(ReduxLogo);
-    if (item.name === "javascript") icons.push(JSLogo);
-    if (item.name === "sass") icons.push(SassLogo);
-    if (item.name === "saga") icons.push(SagaLogo);
-    if (item.name === "heroku") icons.push(HerokuLogo);
-    if (item.name === "firebase") icons.push(FirebaseLogo);
-    if (item.name === "node") icons.push(NodeLogo);
-    if (item.name === "pug") icons.push(PugLogo);
-    if (item.name === "stripe") icons.push(StripeLogo);
+    if (item.name === "React") icons.push(ReactLogo);
+    if (item.name === "Redux") icons.push(ReduxLogo);
+    if (item.name === "JavaScript") icons.push(JSLogo);
+    if (item.name === "Sass") icons.push(SassLogo);
+    if (item.name === "Saga") icons.push(SagaLogo);
+    if (item.name === "Heroku") icons.push(HerokuLogo);
+    if (item.name === "Firebase") icons.push(FirebaseLogo);
+    if (item.name === "Node") icons.push(NodeLogo);
+    if (item.name === "Pug") icons.push(PugLogo);
+    if (item.name === "Stripe") icons.push(StripeLogo);
   });
   const embed = (
     <iframe
@@ -41,24 +59,41 @@ const ProjectComponent = ({ location: { state } }) => {
 
   return (
     <ProjectContainer>
-      <div>{name}</div>
-      <img src={imgUrl} alt="" />
-      <p style={{ textAlign: "center" }}>{desc}</p>
-      <button>See Project</button>
-      <button>See code</button>
-      <p>
-        Tech used:{" "}
-        {techStack.names.map((item, index) =>
-          index === techStack.names.length - 1
-            ? `${item.name}`
-            : `${item.name}, `
-        )}
-      </p>
-      <div className="icons-container">
-        {icons.map((icon) => (
-          <img src={icon} />
-        ))}
-      </div>
+      <Title>{name}</Title>
+      <ImageBox>
+        <img src={imgUrl} alt="" />
+      </ImageBox>
+      <DescriptionBox>
+        <p>{desc}</p>
+      </DescriptionBox>
+      <ButtonBox>
+        <a href={projectLink} target="_blank">
+          <Button dark={true}>See Project</Button>
+        </a>
+        <a href={githubLink} target="_blank">
+          <Button dark={true}>See code</Button>
+        </a>
+      </ButtonBox>
+      <TechDescription>
+        <p className="heading">Tech used:</p>
+        <p>
+          {techStack.names.map((item, index) =>
+            index === techStack.names.length - 1
+              ? `${item.name}`
+              : `${item.name}, `
+          )}
+        </p>
+      </TechDescription>
+      <TechIcons>
+        {icons.map((icon, index, arr) => {
+          if (arr[index] === SagaLogo) {
+            return <img src={icon} className="saga-logo" key={icon} />;
+          }
+          if (arr[index] === HerokuLogo) {
+            return <img src={icon} className="heroku-logo" key={icon} />;
+          } else return <img src={icon} key={icon} />;
+        })}
+      </TechIcons>
       {embed}
     </ProjectContainer>
   );
