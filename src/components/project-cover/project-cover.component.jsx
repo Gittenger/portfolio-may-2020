@@ -8,7 +8,14 @@ import { ProjectCoverContainer, HoverBox } from "./project-cover.styles";
 const ProjectCover = ({ imgUrl, link, projectId }) => (
   <ProjectCoverContainer imgUrl={imgUrl}>
     <HoverBox>
-      <Link to={`${link}/${projectId}`}>
+      <Link
+        to={{
+          pathname: `${link}/${projectId}`,
+          state: {
+            imgUrl,
+          },
+        }}
+      >
         <Button dark={true}>See more</Button>
       </Link>
     </HoverBox>
