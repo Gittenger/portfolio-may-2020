@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { tabletM, mobileM } = device;
 
 export const ContactPageContainer = styled.div`
   ${FlexCenter}
@@ -20,11 +22,19 @@ export const ContactForm = styled.div`
   padding: 2rem;
   border-radius: 0.8rem;
   background-color: white;
+
+  @media ${tabletM} {
+    width: 90%;
+  }
 `;
 
 export const ContactDesc = styled.div`
   display: grid;
   width: 90%;
+
+  p:first-child {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const ContactOptions = styled.div`
@@ -45,5 +55,15 @@ export const ContactOptions = styled.div`
 
   h2 {
     justify-self: end;
+  }
+
+  @media ${mobileM} {
+    width: 60%;
+    grid-template-columns: 1fr 1fr;
+    transform: translateX(1rem);
+
+    h2 {
+      justify-self: center;
+    }
   }
 `;
