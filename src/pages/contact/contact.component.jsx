@@ -22,10 +22,12 @@ const ContactPage = () => (
       <ContactOptions>
         <h2>Email: </h2>
         <p>
-          <a href="mailto:myEmail@gmail.com">myEmail@gmail.com</a>
+          <a href="mailto:john.pittenger86@gmail.com">
+            john.pittenger86@gmail.com
+          </a>
         </p>
         <h2>Phone: </h2>
-        <p>(517) 555-5555</p>
+        <p>(513) 378-6143</p>
       </ContactOptions>
     </ContactForm>
   </ContactPageContainer>

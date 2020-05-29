@@ -10,6 +10,7 @@ import { ReactComponent as GithubLogo } from "../../assets/github.svg";
 import { ReactComponent as EmailLogo } from "../../assets/envelope.svg";
 import { ReactComponent as LinkedinLogo } from "../../assets/linkedin.svg";
 import { ReactComponent as TwitterLogo } from "../../assets/twitter.svg";
+import ProfileImg from "../../assets/profile-1.jpg";
 
 import theme from "../../style-utils/theme.styles";
 import { HomePageComponent } from "./homepage.styles";
@@ -35,12 +36,7 @@ const HomePage = () => (
       }}
       alignment="center"
     />
-    <ImageBox
-      circle
-      imgUrl={
-        "https://i.pinimg.com/originals/da/45/f8/da45f8791ec444f1599fb45bf5e1b705.jpg"
-      }
-    />
+    <ImageBox circle imgUrl={ProfileImg} />
     <Link to="/projects">
       <Button>See my work &#8640;</Button>
     </Link>

@@ -54,13 +54,13 @@ const data = {
     {
       index: 4,
       name: "Portfolio site",
-      imgUrl: "https://i.imgur.com/GDb7Wfp.png",
+      imgUrl: "https://i.imgur.com/7lF5JMB.png",
       desc:
         "This portfolio site is designed to showcase a few of my projects as a software developer. I created it using React with Redux for state management. I included a library called React-Pdf for rendering my resume as a React component. The site is mobile friendly and utilizes many reusable components, as well as Styled Components for styling.",
       techStack: {
         names: [{ name: "React" }, { name: "Redux" }],
       },
-      embedLink: "https://www.youtube.com/embed/MRIMT0xPXFI",
+      embedLink: "https://www.youtube.com/embed/6B8IHeMbj78",
       githubLink: "https://github.com/Gittenger/portfolio-may-2020",
       projectLink: "https://gittenger-crwn-live.herokuapp.com/",
     },

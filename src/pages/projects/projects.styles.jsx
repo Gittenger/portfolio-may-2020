@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { FlexCenter } from "../../style-utils/utils.styles";
+import { FlexCenter, device } from "../../style-utils/utils.styles";
+
+const { tabletM } = device;
 
 export const ProjectsPageContainer = styled.div`
   ${FlexCenter}
@@ -25,4 +27,10 @@ export const ContentContainer = styled.div`
   height: 80%;
   background-color: ${({ theme: { colors } }) => colors.primaryDark1};
   border-radius: 0.8rem;
+
+  @media ${tabletM} {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 23rem);
+    overflow-y: scroll;
+  }
 `;
