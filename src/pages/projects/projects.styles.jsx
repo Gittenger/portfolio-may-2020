@@ -20,17 +20,18 @@ export const ProjectsPageContainer = styled.div`
 export const ContentContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(23rem, 1fr));
   justify-items: center;
   align-items: center;
   width: 90%;
   height: 80%;
   background-color: ${({ theme: { colors } }) => colors.primaryDark1};
   border-radius: 0.8rem;
+  overflow-y: scroll;
 
   @media ${tabletM} {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 23rem);
+    grid-template-rows: repeat(6, 23rem);
     overflow-y: scroll;
   }
 `;

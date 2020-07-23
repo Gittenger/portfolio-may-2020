@@ -64,6 +64,32 @@ const data = {
       githubLink: "https://github.com/Gittenger/portfolio-may-2020",
       projectLink: "https://gittenger-crwn-live.herokuapp.com/",
     },
+    {
+      index: 5,
+      name: "Easybank Landing Page",
+      imgUrl: "https://i.imgur.com/PI452B4.png",
+      desc:
+        "This project was created as a front-end practice project for the purposes of honing my React skills. It was based off of a pre-made design, and my intent was to quickly create an aesthetically pleasing front-end for a website using a React workflow.",
+      techStack: {
+        names: [{ name: "React" }, { name: "Heroku" }],
+      },
+      embedLink: "https://www.youtube.com/embed/eRFMopPKAzU",
+      githubLink: "https://github.com/Gittenger/fem-easybank-landing",
+      projectLink: "https://gittenger-easybank.herokuapp.com/",
+    },
+    {
+      index: 6,
+      name: "Social Media Dashboard w/ Dark Mode",
+      imgUrl: "https://i.imgur.com/cR9leQj.png",
+      desc:
+        "This was a quick project for practicing building a front-end for a user interface using React. It includes a feature for the user to toggle dark mode on or off, which provided a small challenge. This was a great exercise for building and using components which is what React is perfect for.",
+      techStack: {
+        names: [{ name: "React" }, { name: "Heroku" }],
+      },
+      embedLink: "https://www.youtube.com/embed/15daModpK6A",
+      githubLink: "https://github.com/Gittenger/fem-social-media-dashboard",
+      projectLink: "https://fem-social-media-dashboard.herokuapp.com/",
+    },
   ],
 };
 
